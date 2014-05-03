@@ -371,7 +371,7 @@ input#toggle:checked + label:after {
         width: 100%;
         position: absolute;
         top: 0px;
-        overflow:hidden;
+        overflow: hidden;
         background-image: url("../images/redbkgd.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -514,10 +514,10 @@ input#toggle:checked + label:after {
           background-image: url("../images/whitebottle.png");
           /*background-image: url("../images/bluebottle.png");*/
           background-repeat: no-repeat;
-          background-size: contain;
+          background-size: 100%;
           margin: 10px 0 0 0;
           text-align: center;
-          line-height: 73px;
+          line-height: 78px;
           color: white;
           position: absolute;
           right: 6%;
@@ -561,43 +561,136 @@ input#toggle:checked + label:after {
         display: block;
         clear: both;
         width: 100%;
+        min-height: 100vh;
         position: absolute;
         top: 0px;
-        bottom: 0px;
-        overflow-y:auto;
+        overflow:hidden;
         background-image: url("../images/redbkgd.jpg");
-        background-size: cover;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-position: 0px -69px;
+        background-position: 0px -61px;
         background-color:#300205;
         color: white;
         font-weight: lighter;
         padding: 7em 1em 0 1em;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
 
         h1 {
           font-size: 1.7em;
           font-weight: 300;
-          line-height: .8em;
+          line-height: .9em;
         }
         h2 {
           font-size: 1.2em;
           font-weight: 300;
         }
-        .avg_rating {}
+        .avg_rating {
+          width: auto;
+          float: right;
+          position: relative;
+          top: -20px;
+          right: 0;
 
-        .wine-img {
-          img {}
-          .review_btn {}
-          .fav_btn {}
+          .white_bottle_small {
+            float: left;
+            margin-left: 3px;
+          }
+          .blue_bottle_small {}
         }
 
-        h3 {}
-        h4 {}
+        .wine_img {
+          border:1px solid rgba(0,0,0,0.0);
+          border-radius:8px;
+          width: 100%;
+          max-height: 220px;
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 1em;
 
-        p {}
-        .comment_by {}
+          img {width:100%;}
+          .review_btn {
+            display: inline-block;
+            float: left;
+            width: 50%;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            background-color: rgba(255,255,255,0.75);
+            color: #073373;
+            bottom: 0px;
+            line-height: 220%;
+            text-align: center;
+            border-right: 1px solid black;
+            font-weight: 400;
+            font-size: .9em;
+          }
+          .fav_btn {
+            display: inline-block;
+            float: left;
+            width: 50%;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            background-color: rgba(255,255,255,0.75);
+            color: #073373;
+            bottom: 0px;
+            line-height: 220%;
+            text-align: center;
+            border-left: 1px solid black;
+            font-weight: 400;
+            font-size: .9em;
+          }
+        }
+
+        h3 {font-size: 1em;text-transform: uppercase;}
+        .region {
+          font-size: .8em;
+          font-weight: 200;
+          float: left;
+          display: inline-block;
+        }
+        .location {
+          font-size: .8em;
+          font-weight: 200;
+          float:right;
+          display: inline-block;
+        }
+        br {clear:both;}
+
+        .review {
+          .comment_by {font-size: .9em;font-weight: 500;}
+          .usr_rating {
+            width: auto;
+            float: right;
+            position: relative;
+            top: -20px;
+            right: 0;
+
+            .white_bottle_small {
+              float: left;
+              margin-left: 3px;
+            }
+            .blue_bottle_small {}
+          }
+          p {
+            font-size: .8em;
+            font-weight: 200;
+            margin-top: 1em;
+            text-align: left;
+          }
 
 
+          &:after {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.8);
+            width: 110%;
+            display: block;
+            content: "";
+            margin: 10px 0px;
+            position: relative;
+          }
+        }
       }
     }
   }
