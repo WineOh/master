@@ -810,7 +810,7 @@ input#toggle:checked + label:after {
             font-size: 1.2em;
             span {position:absolute;right:.5em;top:.5em;}
           }
-          span.circle_x {
+          .circle_x {
             position: relative;
             top: -115px;
             right:5px;
@@ -830,14 +830,12 @@ input#toggle:checked + label:after {
             width:100%;
             text-align: center;
 
-            .white_bottle_large {
-              display: inline-block;
-            }
-
-            input[type=checkbox]{
+            input[type=checkbox],
+            input {
               display:none;
             }
-            input[type=checkbox] + label{
+            input[type=checkbox] + label,
+            input + label {
               display: inline-block;
               margin-right: 20px;
               background: url('../images/sprites.png') no-repeat -39px -59px;
@@ -848,11 +846,9 @@ input#toggle:checked + label:after {
                 margin-right: 0;
               }
             }
-            input[type=checkbox]:checked + label{
-              background: url('../images/sprites.png') no-repeat -39px -130px;
-              background-size: 100px 200px;
-              width: 23px;
-              height: 67px;
+            input[type=checkbox]:checked + label,
+            input:checked + label{
+              background-position: -39px -130px;
             }
 
           }
