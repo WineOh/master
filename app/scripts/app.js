@@ -8,7 +8,7 @@ angular.module('wineohApp', ['ngRoute'])
     templateUrl: 'views/home.html',
     controller: 'MainCtrl'
   })
-  .when('/detail', {
+  .when('/detail/:id', {
     templateUrl: 'views/detail.html',
     controller: 'DetailCtrl'
   })
@@ -53,4 +53,17 @@ angular.module('wineohApp', ['ngRoute'])
   })
   .otherwise({redirectTo: '/error'});
 }
-]);
+])
+
+.constant('ServiceUrl', 'http://api.wineohapp.com/index.cfm/api')
+
+.run(['$rootScope', '$log', 'WineOhService', function($rootScope, $log, WineOhService) {
+  WineOhService.getWineData().then(
+    function(result) {
+      $rootScope.wineData = result;
+      $log.info('We have wine data back from the server - see $rootScope.wineData');
+    },
+    function(error) {
+      $log.error('We encountered an error getting the wine data from the server: ' + JSON.stringify(error));
+    });
+}]);
