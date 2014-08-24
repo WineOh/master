@@ -369,14 +369,16 @@ input#toggle:checked + label:after {
         display: block;
         clear: both;
         width: 100%;
+        height: auto;
+        min-height: 100%;
         position: absolute;
         top: 0px;
         overflow: hidden;
         background-image: url("../images/redbkgd.jpg");
-        background-size: cover;
+        background-size: 130%;
         background-repeat: no-repeat;
         background-position: 0px -33px;
-        background-color:#300205;
+        background-color: #640106;
 
         /* search */
         .search {
@@ -479,10 +481,16 @@ input#toggle:checked + label:after {
           margin: 8px 15px 8px 0px;
           overflow: hidden;
           border-radius: 10px;
+          position: relative;
         }
         .wine-image img {
-            width: 64px;
-            height: 100%;
+            width: 100%;
+            margin: auto;
+            position: absolute;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
             -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
             box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
           }
@@ -525,19 +533,20 @@ input#toggle:checked + label:after {
         }
       }
 
-
       #whites {
         display: block;
         clear: both;
         width: 100%;
+        height: auto;
+        min-height: 100%;
         position: absolute;
         top: 0px;
         overflow: hidden;
         background-image: url("../images/whitebkgd.jpg");
-        background-size: cover;
+        background-size: 130%;
         background-repeat: no-repeat;
-        background-position: 0px -33px;
-        background-color:#e4d6b2;
+        background-position: 0px -21px;
+        background-color: #e4d6b2;
 
         /* search */
         .search {
@@ -639,10 +648,16 @@ input#toggle:checked + label:after {
           margin: 8px 15px 8px 0px;
           overflow: hidden;
           border-radius: 10px;
+          position: relative;
         }
         .wine-image img {
-            width: 64px;
-            height: 100%;
+            width: 100%;
+            margin: auto;
+            position: absolute;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
             -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
             box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
           }
@@ -689,6 +704,8 @@ input#toggle:checked + label:after {
         display: block;
         clear: both;
         width: 100%;
+        height: auto;
+        min-height: 100%;
         position: absolute;
         top: 0px;
         overflow: hidden;
@@ -800,10 +817,16 @@ input#toggle:checked + label:after {
           margin: 8px 15px 8px 0px;
           overflow: hidden;
           border-radius: 10px;
+          position: relative;
         }
         .wine-image img {
-            width: 64px;
-            height: 100%;
+            width: 100%;
+            margin: auto;
+            position: absolute;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
             -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
             box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
           }
@@ -1478,4 +1501,11 @@ input#toggle:checked + label:after {
       }
     }
   }
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

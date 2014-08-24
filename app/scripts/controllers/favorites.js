@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('wineohApp')
-  .controller('OthersCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
+  .controller('FavoritesCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
 
     var _helper = {
       init: function() {
-        $scope.grapes = $rootScope.wineData.other.grape;
-        $scope.wines = $rootScope.wineData.other.wine;
+        $scope.grapes = $rootScope.wineData.red.grape;
+        $scope.wines = $rootScope.wineData.red.wine;
         $scope.selectedGrape = $scope.grapes[0];
       }
     };

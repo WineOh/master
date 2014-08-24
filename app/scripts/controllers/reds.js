@@ -14,7 +14,7 @@ angular.module('wineohApp')
     _helper.init();
 
     $scope.imageFromWine = function(wine) {
-      return 'http://s3.amazonaws.com/wineoh-images/product/' + wine.wineId + '%20' + wine.wineName.toLowerCase().replace(/ /g, '') + '.png';
+      return 'http://s3.amazonaws.com/wineoh-images/product/' + (parseInt(wine.wineId) + 1) + '%20' + wine.wineName.toLowerCase().replace(/ /g, '') + '.png';
     }
 
   }]);

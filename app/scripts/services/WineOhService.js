@@ -72,7 +72,7 @@ angular.module('wineohApp')
           results.idHash[wine.wineId] = wine;
 
           // Depending on the wine color, populate the appropriate collection in the results object.
-          if(typeof(wine.color)==='undefined' || wine.color === null) {
+          if(typeof(wine.color)==='undefined' || wine.color === null || wine.color === '') {
             results.other.wine.push(wine);
             _helper.populateArrayWithUnique(results.other.grape, wine.grape);
             _helper.populateArrayWithUnique(results.other.classification, wine.classification);
