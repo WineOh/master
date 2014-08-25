@@ -12,8 +12,8 @@ angular.module('wineohApp')
 
         $log.info('requesting url: ' + url);
 
-        $http.get(url).success(function(result) {
-          deferred.resolve(result);
+        $http.jsonp(url).success(function(result) {
+          deferred.resolve(_helper.cleanupData(result));
         }).error(function(error) {
           deferred.reject(error);
         });
