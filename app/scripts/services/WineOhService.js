@@ -12,7 +12,7 @@ angular.module('wineohApp')
 
         $log.info('requesting url: ' + url);
 
-        $http.jsonp(url).success(function(result) {
+        $http.get(url).success(function(result) {
           deferred.resolve(_helper.cleanupData(result));
         }).error(function(error) {
           deferred.reject(error);
@@ -116,10 +116,10 @@ angular.module('wineohApp')
         var url = ServiceUrl + '/wine.json';
 
         // TODO - get CORS headers so this works:
-        // return _helper.doHttpGet(url);
+        return _helper.doHttpGet(url);
 
         // TODO - rip out the mock call:
-        return _helper.mockDoHttpGet(url, MOCK_DATA);
+        // return _helper.mockDoHttpGet(url, MOCK_DATA);
       }
     };
 
