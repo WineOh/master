@@ -116,10 +116,10 @@ angular.module('wineohApp')
         var url = ServiceUrl + '/wine.json';
 
         // TODO - get CORS headers so this works:
-        return _helper.doHttpGet(url);
+        // return _helper.doHttpGet(url);
 
         // TODO - rip out the mock call:
-        // return _helper.mockDoHttpGet(url, MOCK_DATA);
+        return _helper.mockDoHttpGet(url, MOCK_DATA);
       }
     };
 
