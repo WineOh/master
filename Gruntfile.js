@@ -285,7 +285,8 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             'bower_components/**/*',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'styles/fonts/*'
           ]
         }, {
           expand: true,
@@ -293,6 +294,28 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
         }]
+      },
+      post_dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            'images/*',
+            'font/*'
+          ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/styles',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            'fonts/*'
+          ]
+        }
+        ]
       },
       styles: {
         expand: true,
@@ -390,12 +413,13 @@ module.exports = function (grunt) {
     'concat',
     'ngmin',
     'copy:dist',
-    'cdnify',
+    // 'cdnify',
     'cssmin',
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:post_dist'
   ]);
 
   grunt.registerTask('default', [

@@ -1,0 +1,43 @@
+<div id="others">
+
+  <div class="search">
+    <input class="search__input">
+      <div class="search__inset--icon"></div>
+      <div class="search__inset--label"></div>
+    </input>
+  </div>
+
+  <div class="filter">
+    <!-- switch from red to white -->
+    <div class="rotate-right">
+      <input type="checkbox" name="toggle" id="toggle">
+      <label for="toggle"></label>
+    </div>
+
+    <!-- switch labels -->
+    <div class="select-labels">
+      <p>Red</p>
+      <p>White</p>
+    </div>
+
+  <!-- dropdown selector -->
+  <div>
+    <label>
+      <select ng-model="selectedGrape" ng-options="grape for grape in grapes"></select>
+    </label>
+  </div>
+  </div>
+
+  <!-- repeating row layout for search results -->
+  <div ng-repeat="wine in wines" class="wine-row">
+  <a ng-href="#/detail/{{wine.wineId}}">
+    <div class="wine-image"><img ng-src="{{imageFromWine(wine)}}"></div>
+    <div class="wine-name-group">
+      <div class="wine-name truncate" ng-bind="wine.wineName"></div>
+      <div class="wine-maker truncate" ng-bind="wine.varietal"></div>
+    </div>
+    <div class="wine-rating" ng-bind="wine.rating"></div>
+  </a>
+  </div>
+
+</div>

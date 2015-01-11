@@ -1,11 +1,13 @@
 'use strict';
 
 angular.module('wineohApp')
-  .controller('DetailCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
+  .controller('WhitesCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
 
     var _helper = {
       init: function() {
-        $scope.wines = $rootScope.wineData;
+        $scope.grapes = $rootScope.wineData.white.grape;
+        $scope.wines = $rootScope.wineData.white.wine;
+        $scope.selectedGrape = $scope.grapes[0];
       }
     };
 

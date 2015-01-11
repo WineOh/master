@@ -1,0 +1,73 @@
+[
+  {
+    '_id': '001',
+    'First Name': 'Paul',
+    'Last Name': 'Lee',
+    'User Name': 'creativeleep',
+    'Email Address': 'creativeleep@gmail.com',
+    'Flair': [''],
+    'Social Accounts': 'Facebook',
+    'Favorites': [''],
+    'Reviewed': [''],
+    'Shared': ['']
+  },
+  {
+    '_id': '002',
+    'First Name': 'Kristin',
+    'Last Name': 'Muery',
+    'User Name': 'feztek',
+    'Email Address': 'Kristin.Muery@level3.com',
+    'Flair': [''],
+    'Social Accounts': 'Facebook',
+    'Favorites': [''],
+    'Reviewed': [''],
+    'Shared': ['']
+  },  {
+    '_id': '003',
+    'First Name': 'Steve',
+    'Last Name': 'Karnish',
+    'User Name': 'skeeter47',
+    'Email Address': 'skeeter47@yahoo.com',
+    'Flair': [''],
+    'Social Accounts': 'Facebook',
+    'Favorites': [''],
+    'Reviewed': [''],
+    'Shared': ['']
+  },
+  {
+    '_id': '004',
+    'First Name': 'Duke',
+    'Last Name': 'Beamish',
+    'User Name': 'dukembeamish',
+    'Email Address': 'dukebeamish@gmail.com>',
+    'Flair': [''],
+    'Social Accounts': 'Facebook',
+    'Favorites': [''],
+    'Reviewed': [''],
+    'Shared': ['']
+  },
+  {
+    '_id': '005',
+    'First Name': 'Pedro',
+    'Last Name': 'Meza',
+    'User Name': 'pmeza',
+    'Email Address': 'pmeza@gmail.com',
+    'Flair': [''],
+    'Social Accounts': 'Facebook',
+    'Favorites': [''],
+    'Reviewed': [''],
+    'Shared': ['']
+  },
+  {
+    '_id': '006',
+    'First Name': 'Eric',
+    'Last Name': 'Internacola',
+    'User Name': 'intere',
+    'Email Address': 'intere@gmail.com',
+    'Flair': [''],
+    'Social Accounts': 'Facebook',
+    'Favorites': [''],
+    'Reviewed': [''],
+    'Shared': ['']
+  }
+]

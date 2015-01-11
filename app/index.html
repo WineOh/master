@@ -10,15 +10,19 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone-retina-display.png" />
     <!--<meta name="viewport" content="width=device-width">-->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="bower_components/compass/frameworks/compass/stylesheets/compass/css3/_font-face.scss">
+    <link rel="stylesheet" href="styles/sprites.css">
     <link rel="stylesheet" href="styles/angular-snap.css">
     <link rel="stylesheet" href="bower_components/topcoat/css/topcoat-desktop-light.min.css">
     <!-- endbuild -->
@@ -33,13 +37,13 @@
 
       <div snap-drawer>
         <ul data-role="listview" data-type="group">
-          <li>Menu
-            <li><a href="#drawer-newwines">New Wines<br><span class="smalltext">check out our new additions</span></a></li>
-            <li><a href="#drawer-reviews">Reviews<br><span class="smalltext">reviews, ratings, and more</span></a></li>
-            <li><a href="#drawer-profile">Profile<br><span class="smalltext">account information</span></a></li>
-            <li><a href="#drawer-social">Social<br><span class="smalltext">Facebook, Twitter, Google+</span></a></li>
-            <li><a href="#drawer-badges">Badges<br><span class="smalltext">achievements and milestones</span></a></li>
-          </li>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/new_wines">New Wines<br><span class="smalltext">check out our new additions</span></a></li>
+          <li><a href="#/review">Reviews<br><span class="smalltext">reviews, ratings, and more</span></a></li>
+          <li><a href="#/profile">Profile<br><span class="smalltext">account information</span></a></li>
+          <li><a href="#/social">Social<br><span class="smalltext">Facebook, Twitter, Google+</span></a></li>
+          <li><a href="#/badges">Flair<br><span class="smalltext">achievements and milestones</span></a></li>
+
         </ul>
       </div>
 
@@ -183,7 +187,7 @@
           <div class="header-title">WineOh!</div>
           <div snap-toggle="right" class="header--favmenuicon"><span class="topcoat-icon icomatic"></div>
         </div>
-        <div class="container" ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+        <div class="container" ng-view=""></div>
       </div>
     </snap-content>
 
@@ -203,19 +207,37 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <!--  Currently not using - see the included versions.
+    <script src="bower_components/snapjs/snap.js"></script>
+    <script src="bower_components/angular-snap/angular-snap.js"></script>
+    -->
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/snap.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/directives/angular-snap.js"></script>
-        <script src="scripts/controllers/detail.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/snap.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/Detail.js"></script>
+    <script src="scripts/directives/angular-snap.js"></script>
+    <script src="scripts/controllers/review.js"></script>
+    <script src="scripts/controllers/profile.js"></script>
+    <script src="scripts/controllers/social.js"></script>
+    <script src="scripts/controllers/badges.js"></script>
+    <script src="scripts/controllers/new_wines.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/others.js"></script>
+    <script src="scripts/controllers/whites.js"></script>
+    <script src="scripts/controllers/reds.js"></script>
+    <script src="scripts/services/wineohservice.js"></script>
+    <!-- endbuild -->
+
+
 </body>
 </html>
