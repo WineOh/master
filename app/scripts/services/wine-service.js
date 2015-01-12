@@ -5,7 +5,7 @@ angular.module('wineohApp').service('WineService', function WineService() {
         findWine: function() {
             var defer;
             defer = $q.defer();
-            $http.get('data/wine.json').success(function(response) {
+            $http.get('scripts/data/wine.json').success(function(response) {
                 return defer.resolve(response);
             }).error(function(response, status) {
                 return defer.reject(status);
