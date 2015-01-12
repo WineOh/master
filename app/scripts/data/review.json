@@ -1,0 +1,66 @@
+[
+  {
+    '_id': 'r001',
+    'wine_id': 'w001',
+    'user_id': 'p001',
+    'username': 'creativeleep',
+    'rating': 4,
+    'review': 'This wine is ok'
+  },
+  {
+    '_id': 'r002',
+    'wine_id': 'w002',
+    'user_id': 'p002',
+    'username': 'feztek',
+    'rating': 4,
+    'review': 'This wine is the best I\'ve ever had'
+  },
+  {
+    '_id': 'r003',
+    'wine_id': 'w002',
+    'user_id': 'p002',
+    'username': 'feztek',
+    'rating': 4,
+    'review': 'We had this wine with our Thanksgiving Turkey'
+  },
+  {
+    '_id': 'r004',
+    'wine_id': 'w003',
+    'user_id': 'p002',
+    'username': 'feztek',
+    'rating': 4,
+    'review': 'The wine was ok'
+  },
+  {
+    '_id': 'r005',
+    'wine_id': 'w003',
+    'user_id': 'p003',
+    'username': 'skeeter47',
+    'rating': 4,
+    'review': 'I don\'t know about this wine. It had a funny after taste.'
+  },
+  {
+    '_id': 'r006',
+    'wine_id': 'w003',
+    'user_id': 'p003',
+    'username': 'skeeter47',
+    'rating': 4,
+    'review': 'This is the best wine ever!!!'
+  },
+  {
+    '_id': 'r007',
+    'wine_id': 'w004',
+    'user_id': 'p004',
+    'username': 'dukembeamish',
+    'rating': 4,
+    'review': 'Pass'
+  },
+  {
+    '_id': 'r008',
+    'wine_id': 'w004',
+    'user_id': 'p004',
+    'username': 'dukembeamish',
+    'rating': 4,
+    'review': 'Excellent taste!'
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    '_id': 'p001',
+    'first_name': 'Paul',
+    'last_name': 'Lee',
+    'user_name': 'creativeleep',
+    'email_address': 'creativeleep@gmail.com',
+    'flair': [''],
+    'social_accounts': 'Facebook',
+    'favorites': [''],
+    'reviewed': [''],
+    'shared': ['']
+  },
+  {
+    '_id': 'p002',
+    'first_name': 'Kristin',
+    'last_name': 'Muery',
+    'user_name': 'feztek',
+    'email_address': 'Kristin.Muery@level3.com',
+    'flair': [''],
+    'social_accounts': 'Facebook',
+    'favorites': [''],
+    'reviewed': [''],
+    'shared': ['']
+  },  {
+    '_id': 'p003',
+    'first_name': 'Steve',
+    'last_name': 'Karnish',
+    'user_name': 'skeeter47',
+    'email_address': 'skeeter47@yahoo.com',
+    'flair': [''],
+    'social_accounts': 'Facebook',
+    'favorites': [''],
+    'reviewed': [''],
+    'shared': ['']
+  },
+  {
+    '_id': 'p004',
+    'first_name': 'Duke',
+    'last_name': 'Beamish',
+    'user_name': 'dukembeamish',
+    'email_address': 'dukebeamish@gmail.com>',
+    'flair': [''],
+    'social_accounts': 'Facebook',
+    'favorites': [''],
+    'reviewed': [''],
+    'shared': ['']
+  },
+  {
+    '_id': 'p005',
+    'first_name': 'Pedro',
+    'last_name': 'Meza',
+    'user_name': 'pmeza',
+    'email_address': 'pmeza@gmail.com',
+    'flair': [''],
+    'social_accounts': 'Facebook',
+    'favorites': [''],
+    'reviewed': [''],
+    'shared': ['']
+  },
+  {
+    '_id': 'p006',
+    'first_name': 'Eric',
+    'last_name': 'Internacola',
+    'user_name': 'intere',
+    'email_address': 'intere@gmail.com',
+    'flair': [''],
+    'social_accounts': 'Facebook',
+    'favorites': [''],
+    'reviewed': [''],
+    'shared': ['']
+  }
+]
