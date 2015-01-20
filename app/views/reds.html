@@ -10,7 +10,7 @@
   <div class="filter">
     <!-- switch from red to white -->
     <div class="rotate-right">
-      <input type="checkbox" name="toggle" id="toggle">
+      <input type="checkbox" name="toggle" id="toggle" ng-model="selectedWine" ng-click="toggle()">
       <label for="toggle"></label>
     </div>
 
@@ -29,12 +29,12 @@
   </div>
 
   <!-- repeating row layout for search results -->
-  <div ng-repeat="wine in wines" class="wine-row">
-    <a ng-href="#/detail/{{wine.wineId}}">
+  <div ng-repeat="wine in wines | filter: {Color: 'Red'}" class="wine-row">
+    <a ng-href="#/detail/{{wine._id}}">
       <div class="wine-image"><img ng-src="{{imageFromWine(wine)}}"></div>
       <div class="wine-name-group">
-        <div class="wine-name truncate" ng-bind="wine.wineName"></div>
-        <div class="wine-maker truncate" ng-bind="wine.varietal"></div>
+        <div class="wine-name truncate" ng-bind="wine.Name"></div>
+        <div class="wine-maker truncate" ng-bind="wine.Varietal"></div>
       </div>
       <div class="wine-rating" ng-bind="wine.rating"></div>
     </a>

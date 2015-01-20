@@ -55,15 +55,14 @@ angular.module('wineohApp', ['ngRoute'])
 }
 ])
 
-.constant('ServiceUrl', 'http://api.wineohapp.com/index.cfm/api')
-
-.run(['$rootScope', '$log', 'WineOhService', function($rootScope, $log, WineOhService) {
-  WineOhService.getWineData().then(
-    function(result) {
-      $rootScope.wineData = result;
-      $log.info('We have wine data back from the server - see $rootScope.wineData');
-    },
-    function(error) {
-      $log.error('We encountered an error getting the wine data from the server: ' + JSON.stringify(error));
-    });
+.run(['$rootScope', '$log', function($rootScope, $log) {
+  // -1 is red wine and +1 is white wine
+  $rootScope.selectedWine = 0;
+  $rootScope.toggleWine = function(){
+    if ($rootScope.selectedWine == 0){
+      $rootScope.selectedWine = 1;
+    } else {
+      $rootScope.selectedWine = 0;
+    }
+  }
 }]);

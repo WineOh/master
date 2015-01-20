@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('wineohApp').service('WineService', function WineService() {
+angular.module('wineohApp').service('WineService', function WineService($http, $q) {
     return {
         findWine: function() {
             var defer;
